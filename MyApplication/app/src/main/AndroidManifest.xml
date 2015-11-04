@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.maxtel.musichub.broadcast" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name="MyReceiver">
+
+            <intent-filter>
+                <action android:name="com.maxtel.musichub.broadcast.CUSTOM_INTENT">
+                </action>
+            </intent-filter>
+
+        </receiver>
+
+        <!-- Add new Activity class name here -->
+        <activity android:name=".example_activity"></activity>
+        <activity android:name=".example_service"></activity>
+        <activity android:name=".example_content"></activity>
+        <activity android:name=".example_broadcast"></activity>
+        <activity android:name=".example_play"></activity>
+        <service android:name=".MyService" />
+
+        <provider android:name="StudentsProvider" android:authorities="com.maxtel.musichub.provider.College">
+        </provider>
+
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+
+
+
+
+
+
+
+        </application>
+
+        </manifest>
