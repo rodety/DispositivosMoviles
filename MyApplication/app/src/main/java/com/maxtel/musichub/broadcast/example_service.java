@@ -23,6 +23,7 @@ public class example_service extends Activity {
     // Method to start the service
     public void startService(View view) {
         startService(new Intent(getBaseContext(), MyService.class));
+
     }
 
     // Method to stop the service

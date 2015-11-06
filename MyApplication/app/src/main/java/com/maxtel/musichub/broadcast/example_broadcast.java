@@ -76,7 +76,7 @@ public class example_broadcast extends Activity {
         System.out.println("_services");
     }
     public void _broadcast(View view){
-        Intent nextScreen = new Intent(getApplicationContext(), example_activity.class);
+        Intent nextScreen = new Intent(getApplicationContext(), example_broadcast.class);
         startActivity(nextScreen);
         System.out.println("_broadcast");
     }
